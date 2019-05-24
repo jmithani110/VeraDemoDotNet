@@ -28,6 +28,19 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
+- task: Veracode@2
+  inputs:
+    ConnectionDetailsSelection: 'Endpoint'
+    AnalysisService: 'Veracode'
+    veracodeAppProfile: '$(system.teamProject)'
+    version: '$(build.buildNumber)'
+    filepath: '$(build.artifactstagingdirectory)'
+    createSandBox: false
+    createProfile: true
+    scanStatusCheckInterval: '60'
+    importResults: false
+    failBuildOnPolicyFail: false
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
