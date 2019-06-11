@@ -14,7 +14,7 @@ namespace Verademo_dotnet
             if (Request.QueryString["command"] != null)
             {
                 // bad
-                System.Diagnostics.Process.Start(Request.QueryString["command"]);
+                // System.Diagnostics.Process.Start(Request.QueryString["command"]);
 
             }
         }
