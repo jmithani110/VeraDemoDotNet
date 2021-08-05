@@ -12,6 +12,9 @@ Setup API Key in Pipeline Variables
 Once build completes you can download results.json from build Artifact screen or view them in the console output for the Pipeline scanner step.  
 
 Check the results.json into source code and reference it in the command to break build on new findings. 
-Add - bf results.json to string. Remove the || true at the end of the string if you would like the build process to break on new flaws.
+
+Add - bf results.json to string. 
+
+Remove the || true at the end of the string if you would like the build process to break on new flaws.
 
 Find further options here:https://help.veracode.com/r/r_pipeline_scan_commands
