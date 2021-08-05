@@ -27,21 +27,3 @@ steps:
     msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:PackageLocation="$(build.artifactStagingDirectory)"'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-
-- task: Veracode@2
-  inputs:
-    ConnectionDetailsSelection: 'Endpoint'
-    AnalysisService: 'Veracode'
-    veracodeAppProfile: '$(system.teamProject)'
-    version: '$(build.buildNumber)'
-    filepath: '$(build.artifactstagingdirectory)'
-    createSandBox: false
-    createProfile: false
-    scanStatusCheckInterval: '60'
-    importResults: true
-    failBuildOnPolicyFail: true
-
-- task: VSTest@2
-  inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
