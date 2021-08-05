@@ -1,3 +1,3 @@
-# VeraDemoDotNet
+# VeraDemoDotNet - a great test application for Veracode IDE Scanner and the Veracode Static Pipeline Scanner.
 
-A great test application to use with Veracode IDE Scan and Veracode Pipeline Scan. 
+# This is an example for Azure Dev Ops using VeraDemoDotNet test application with the Veracode Static Pipeline scanner.  A Veracode subscription is required.
